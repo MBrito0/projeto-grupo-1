@@ -15,7 +15,7 @@ class PesquisaDigital:
             'Você acha que o governo está fazendo o suficiente para reduzir a diferença no acesso à tecnologia?'
         ]
 
-    # Metodo para mostrar o menu de opções.
+    # Metodo para mostrar o meunu pardão.
     def menu_pesquisa(self):
         return f'''
         =================================================
@@ -29,13 +29,11 @@ class PesquisaDigital:
     def fazer_pesquisa(self):
         while True:
             lista_respostas = [] 
+
             try:
-                idade = int(input('Digite sua idade: '))
+                idade = int(input('Digite sua idade (ou 0 para sair): '))
                 # Caso a idade seja igual a Zero, o código para.
-                if not lista_respostas:
-                    print('Nenhuma pesquisa realizada, pois não há informações o suficiente.')   
-                    break 
-                elif idade == 0:
+                if idade == 0:
                     self.df.to_csv('pesquisa_digital.csv', index=False, sep=';')
                     print(self.df)
                     print("Dados salvos em 'pesquisa_digital.csv'")
@@ -67,6 +65,8 @@ class PesquisaDigital:
                             resposta = 'NAO SEI RESPONDER'
                             lista_respostas.append(resposta)
 
+            
+                                
                 # Cria uma variável que armazena a data e hora em que a resposta foi armazenada no DataFrame
                 hora_atual = dt.datetime.now()
                 data_hora_resposta = hora_atual.strftime('%d/%m/%Y %H:%M')
