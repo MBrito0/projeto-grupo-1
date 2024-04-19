@@ -29,12 +29,13 @@ class PesquisaDigital:
     def fazer_pesquisa(self):
         while True:
             lista_respostas = [] 
-            
             try:
                 idade = int(input('Digite sua idade: '))
-                
                 # Caso a idade seja igual a Zero, o código para.
-                if idade == 0:
+                if not lista_respostas:
+                    print('Nenhuma pesquisa realizada, pois não há informações o suficiente.')   
+                    break 
+                elif idade == 0:
                     self.df.to_csv('pesquisa_digital.csv', index=False, sep=';')
                     print(self.df)
                     print("Dados salvos em 'pesquisa_digital.csv'")
@@ -42,7 +43,7 @@ class PesquisaDigital:
                 # caso a variável idade seja maior que zero
                 elif idade > 0:
                     genero = input('Digite a inicial do seu gênero: ')
-                    while genero not in ['M','m','F','f']:
+                    while genero not in ['M','m','F','f','O','o']:
                         print('Por favor, digite somente a inicial do seu gênero: ')
                         genero = input('Digite seu gênero: ')
 
@@ -66,8 +67,6 @@ class PesquisaDigital:
                             resposta = 'NAO SEI RESPONDER'
                             lista_respostas.append(resposta)
 
-            
-                                
                 # Cria uma variável que armazena a data e hora em que a resposta foi armazenada no DataFrame
                 hora_atual = dt.datetime.now()
                 data_hora_resposta = hora_atual.strftime('%d/%m/%Y %H:%M')
