@@ -15,7 +15,7 @@ class PesquisaDigital:
             'Você acha que o governo está fazendo o suficiente para reduzir a diferença no acesso à tecnologia?'
         ]
 
-    # Metodo para mostrar o meunu pardão.
+    # Metodo para mostrar o menu de opções.
     def menu_pesquisa(self):
         return f'''
         =================================================
