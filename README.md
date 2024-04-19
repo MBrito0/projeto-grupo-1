@@ -46,4 +46,7 @@ Fomos desafiados por Resilia a desenvolver um projeto em python de uma pesquisa 
  - `Pandas`
  - `Python`
 
+| Co- Facilitador | Gestora de Conhecimento |  Gestora de Gente e Engajamento |  Colaboradora I |  Colaborador II |  
+| --- | --- | --- | --- | --- |
+| <br> <sub> Luiz Fernando Duarte </sub>](https://github.com/) | <br> <sub> Guttenberg Junior </sub>](https://github.com/) |  <br> <sub> Karlana Lima </sub>](https://github.com/) | <br> <sub> Emanuella Brito </sub>](https://github.com/MBrito0) |  <br> <sub> Larissa Abrahão </sub>](https://github.com/) | 
 
